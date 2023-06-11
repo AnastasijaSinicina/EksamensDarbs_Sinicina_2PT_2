@@ -5,25 +5,70 @@ using namespace std;
   string atbilzuVar[10]; //masīvs ar atbilžu variantiem
   string pareizAtbildes[10]; //masīvas ar pareizajām atbildēm
 
-  jautajumi [1] = "1. Kā saucās cikls kura pieraksts ir šāds?\n"
-    "    while(<nosacījums>){"
-    "    izpildāmie operatori; }\n";
-  jautajumi[2] = "2. Kuri apgalvojumi apraksta while ciklu?";
+  jautajumi [0] = "1. Kā saucās cikls kura pieraksts ir šāds?\n"
+    "\twhile(<nosacījums>){\n"
+    "\tizpildāmie operatori; }\n";
+  jautajumi[1] = "2. Kuri apgalvojumi apraksta while ciklu?";
+  jautajumi[2] = "3. Kāda ir \"while\" cikla sintakse?";
+  jautajumi[3] = "4. Kuri cikli darbosies bezgalīgi daudz?";
+  jautajumi[4] = "5. Vai \"while\" ciklā var atrasties citi cikli?";
+  jautajumi[5] = "6. Kādas ir \"while\" cikla iespējamās problēmas?";
+  jautajumi[6] = "7. Kā var pārtraukt while cikla izpildi agrāk nekā nosacījums kļūst nepatiess?";
+  jautajumi[7] = "8. Kā palielināt mainīgā vērtību \"while\" ciklā?";
+  jautajumi[8] = "9. Kuri cikli neizpīldīsies?";
+  jautajumi[9] = "10. Kuri cikli darbosies 4 reizes?";
+    
 
 
-
-  atbilzuVar[1] = "\tA. Cikls ar pēcnosacījumu\n"
+  atbilzuVar[0] = "\tA. Cikls ar pēcnosacījumu\n"
     "\tB. Cikls ar priekšnosacījumu\n"
     "\tC. While\n\tD. Do...while\n";
-  atbilzuVar[2] = "\tA. Vispirms pārbaudi, pēc tam dari.\n"
-    "\tB. Konstrukcija ar nosacījumu cikla sākumā.\n"
-    "\tC. Konstrukcija ar nosacījumu cikla beigās.\n"
-    "\tD. Ja nosacījums nepatiess, neviena darbība netiek pildīta.\n";
+  atbilzuVar[1] = "\tA.\tVispirms pārbaudi, pēc tam dari.\n"
+    "\tB.\tKonstrukcija ar nosacījumu cikla sākumā.\n"
+    "\tC.\tKonstrukcija ar nosacījumu cikla beigās.\n"
+    "\tD.\tJa nosacījums nepatiess, neviena darbība netiek pildīta.\n";
+  atbilzuVar[2] = "\tA.\t{ izpildāmie_operatori; } while (izteiksme)\n"
+"\tB.\tizpildāmie_operatori; while (izteiksme)\n"
+"\tC.\twhile (izteiksme) { izpildāmie_operatori; }\n"
+"\tD.\twhile (izteiksme)  izpildāmie_operatori;\n";
+  atbilzuVar[3] = "\tA.\tint a = 0;\n\t\twhile(a < 5){\n\t\tcout<<a; }\n\n"
+"\tB.\tint i = 2;\n\t\twhile(i<10){\n\t\tcout<<i<<\" * \"<<i<<\" = \"<<i*i;}\n\n"
+ "\tC. int i = 2;\n\t\twhile(i<10){\n\t\tcout<<i<<\" * \"<<i<<\" = \"<<i*i;\n\t\ti++;}\n\n\tD.\tVisi";
+  atbilzuVar[4] = "\tA.\tJā\n\tB.\tNē\n\tC.\tJā, bet obligāti jālieto figuriekavas\n\tD.\tTikai if..else\n";
+  atbilzuVar[5] = "\tA.\tCikls var radīt neparedzētas kļūdas, ja nosacījums ir sarežģīts loģiskais izteiksmes.\n"
+"\tB.\tCikls var nekad neizpildīties, ja nosacījums vienmēr ir nepatiess.\n"
+"\tC.\tCikls var izraisīt pārmērīgu resursu patēriņu, ja izpildāmie operatori ir laikietilpīgi.\n"
+"\tD.\tCikls var izpildīties bezgalīgi, ja nosacījums nekad nav patiess.\n";
+  atbilzuVar[6] =  "\tA.\tIzmantojot \"break\" komandu.\n"
+"\tB.\tIzmantojot \"continue\" komandu.\n"
+"\tC.\tIzmantojot \"return\" komandu.\n"
+"\tD.\tVisi varianti ir pareizi.\n";
+  atbilzuVar[7] = "\tA.\tmainigais++;\n"
+"\tB.\tmainigais += 1;\n"
+"\tC.\tmainigais = mainigais + 1;\n"
+"\tD.\tmainigas=mainigais\n";
+  atbilzuVar[8] = "\tA.\tint x = 0;\n\t\twhile (x > 10) {\n\t\tcout<<x;}\n\n"
+    "\tB.\tint x = 10;\n\t\twhile(x < 0) {\n\t\tcout<<x;\n\t\tx++;}\n\n"
+    "\tC.\tint a = 0;\n\t\twhile(a < 5){\n\t\tcout<<a; }\n\n"
+    "\tD.\tint i = 2;\n\t\twhile(i<10){\n\t\tcout<<i<<\" * \"<<i<<\" = \"<<i*i;}\n"
+    ;
+  atbilzuVar[9] = "\tA.\tint a = 0;\n\t\twhile (a > 10) {\n\t\tcout<<a;}\n\n"
+     "\tB.\tint b = 0;\n\t\twhile(b < 5){\n\t\tcout<<b; }\n\n"
+    "\tC.\tint c = 4;\n\t\twhile(c<10){\n\t\tcout<<c<<\" \"\n\t\tc+=2;}\n\n"
+    "\tD.\tint d = 4;\n\t\twhile(d<4){\n\t\tcout<<d<<\" \"\n\t\td++;}";
 
-  pareizAtbildes[1] = "A,C";
-  pareizAtbildes[2] = "A,B,D";
+  pareizAtbildes[0] = "A,C";
+  pareizAtbildes[1] = "A,B,D";
+  pareizAtbildes[2] = "C,D";
+  pareizAtbildes[3] = "A,B";
+  pareizAtbildes[4] = "A,C";
+  pareizAtbildes[5] = "B,D";
+  pareizAtbildes[6] = "A,B";
+  pareizAtbildes[7] = "A,B,C";
+  pareizAtbildes[8] = "A,B";
+  pareizAtbildes[9] = "B,C";
 
-  for(int i=1; i<10; i++){
+  for(int i=0; i<10; i++){
     cout<<jautajumi[i]<<"\n";
     cout<<atbilzuVar[i]<<"\n";
   }
