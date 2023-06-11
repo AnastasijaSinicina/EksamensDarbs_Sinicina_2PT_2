@@ -5,7 +5,7 @@ using namespace std;
   string atbilzuVar[10]; //masīvs ar atbilžu variantiem
   string pareizAtbildes[10]; //masīvs ar pareizajām atbildēm
   string atb[10]; //masīvs, kurā glābājās lietotāja atbildes
-  string nepareziJautajumi[10]; //masīvs, kurā tiek ievietoti jautājumi, uz kuriem lietotajs atbildējis nepareizi
+  string nepareiziJautajumi[10]; //masīvs, kurā tiek ievietoti jautājumi, uz kuriem lietotajs atbildējis nepareizi
   string nepareiziAtbildes[10]; //masīvs, kurā tiek ievietotās pareizas atbildes uz jautājumiem, kur lietotājs pieļaujis kļūdu
   int punkti = 0; //punktu skaits
   
@@ -76,6 +76,24 @@ using namespace std;
   for(int i=0; i<10; i++){
     cout<<jautajumi[i]<<"\n";
     cout<<atbilzuVar[i]<<"\n";
+    cin>>atb[i];
+
+    if(atb[i]==pareizAtbildes[i]){
+      cout<<"PAREIZI!\n";
+      punkti++;
+    }else{
+      cout<<"NEPAREIZI!\n";
+    nepareiziJautajumi[i] = jautajumi[i]; //ja atbilde ir nepareiza, tad šīs jautājums tiek ievietots jaunajā masīva
+      nepareiziAtbildes[i] = pareizAtbildes[i]; //ja atbilde ir nepareiza, tad pareizās atbildes attiecīgam jautājumam tiek ievietotas jaunajā masīvā      
+    }
   }
-  
+  cout<<"---------------------------------\n";
+  cout<<"Pareizo atbilžu skaits: "<<punkti<<"\n";
+  cout<<"Nepareizo jautājumu sarakts: \n\n";
+  for(int i=0; i<10; i++){
+    if (!nepareiziJautajumi[i].empty() && !nepareiziAtbildes[i].empty()) {
+    cout<<nepareiziJautajumi[i]<<"\n";
+    cout<<"Pareizas atbildes: "<<nepareiziAtbildes[i]<<"\n\n";
+    }
+  }
 }
