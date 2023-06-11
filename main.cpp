@@ -8,6 +8,12 @@ using namespace std;
   string nepareiziJautajumi[10]; //masīvs, kurā tiek ievietoti jautājumi, uz kuriem lietotajs atbildējis nepareizi
   string nepareiziAtbildes[10]; //masīvs, kurā tiek ievietotās pareizas atbildes uz jautājumiem, kur lietotājs pieļaujis kļūdu
   int punkti = 0; //punktu skaits
+
+
+
+
+  cout<<"Sveiki! Tev ir iespēja pārbaudīt savas zināšanas par tēmu \"Cikls ar prieksnosacījumu\"\n";
+  cout<<"Uz katru jautājumu ir 2 vai 3 pareizas atbildes. Atbildes raksti ar lielajiem burtiem, alfabetu secībā un ar komatiem(bez atstarpem)\nPiemēram: A,B,D\n\n";
   
 
   jautajumi [0] = "1. Kā saucās cikls kura pieraksts ir šāds?\n"
