@@ -3,7 +3,12 @@ int main() {
 using namespace std;
   string jautajumi[10]; //masīvs ar jautājumiem
   string atbilzuVar[10]; //masīvs ar atbilžu variantiem
-  string pareizAtbildes[10]; //masīvas ar pareizajām atbildēm
+  string pareizAtbildes[10]; //masīvs ar pareizajām atbildēm
+  string atb[10]; //masīvs, kurā glābājās lietotāja atbildes
+  string nepareziJautajumi[10]; //masīvs, kurā tiek ievietoti jautājumi, uz kuriem lietotajs atbildējis nepareizi
+  string nepareiziAtbildes[10]; //masīvs, kurā tiek ievietotās pareizas atbildes uz jautājumiem, kur lietotājs pieļaujis kļūdu
+  int punkti = 0; //punktu skaits
+  
 
   jautajumi [0] = "1. Kā saucās cikls kura pieraksts ir šāds?\n"
     "\twhile(<nosacījums>){\n"
