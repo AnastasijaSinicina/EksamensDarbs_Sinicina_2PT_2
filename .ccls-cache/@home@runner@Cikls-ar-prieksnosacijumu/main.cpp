@@ -1,6 +1,10 @@
 #include <iostream>
 int main() {
 using namespace std;
+  
+  cout<<"Sveiki! Tev ir iespēja pārbaudīt savas zināšanas par tēmu \"Cikls ar prieksnosacījumu\"\n";
+  cout<<"Uz katru jautājumu ir 2 vai 3 pareizas atbildes. Atbildes raksti ar lielajiem burtiem, alfabetu secībā un ar komatiem(bez atstarpem)\nPiemēram: A,B,D\n\n";
+  
   string jautajumi[10]; //masīvs ar jautājumiem
   string atbilzuVar[10]; //masīvs ar atbilžu variantiem
   string pareizAtbildes[10]; //masīvs ar pareizajām atbildēm
@@ -8,13 +12,6 @@ using namespace std;
   string nepareiziJautajumi[10]; //masīvs, kurā tiek ievietoti jautājumi, uz kuriem lietotajs atbildējis nepareizi
   string nepareiziAtbildes[10]; //masīvs, kurā tiek ievietotās pareizas atbildes uz jautājumiem, kur lietotājs pieļaujis kļūdu
   int punkti = 0; //punktu skaits
-
-
-
-
-  cout<<"Sveiki! Tev ir iespēja pārbaudīt savas zināšanas par tēmu \"Cikls ar prieksnosacījumu\"\n";
-  cout<<"Uz katru jautājumu ir 2 vai 3 pareizas atbildes. Atbildes raksti ar lielajiem burtiem, alfabetu secībā un ar komatiem(bez atstarpem)\nPiemēram: A,B,D\n\n";
-  
 
   jautajumi [0] = "1. Kā saucās cikls kura pieraksts ir šāds?\n"
     "\twhile(<nosacījums>){\n"
@@ -95,11 +92,15 @@ using namespace std;
   }
   cout<<"---------------------------------\n";
   cout<<"Pareizo atbilžu skaits: "<<punkti<<"\n";
+  if(punkti==10){
+    cout<<"Visas atbildes ir pareizas!";
+  }else{
   cout<<"Nepareizo jautājumu sarakts: \n\n";
   for(int i=0; i<10; i++){
     if (!nepareiziJautajumi[i].empty() && !nepareiziAtbildes[i].empty()) {
     cout<<nepareiziJautajumi[i]<<"\n";
     cout<<"Pareizas atbildes: "<<nepareiziAtbildes[i]<<"\n\n";
+     }
     }
+   }
   }
-}
