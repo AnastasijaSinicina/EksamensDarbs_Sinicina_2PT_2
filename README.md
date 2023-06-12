@@ -3,8 +3,8 @@ Cikls ar priekšnosacījumu programmēšanas valodā C++
 
 ## Darbu saraksts
 
-- [ ] Izveidot macību materiālu par tēmu.
-- [ ] Izveidot divas UML diagrammas atbilstošas programmai.
-- [ ] Izveidot testu, kas ļauj lietotajam pārbaidīt savas zināšanas tēmā.
-- [ ] Pēc testa izpildīsanas lietotājam parādās uz cik jautājumiem atbildējis pareizi .
-- [ ] Ka arī parādīt uz kādiem jautājumiem atbildējis nepareizi.
+- [x] Izveidot macību materiālu par tēmu.
+- [x] Izveidot divas UML diagrammas atbilstošas programmai.
+- [x] Izveidot testu, kas ļauj lietotajam pārbaidīt savas zināšanas tēmā.
+- [x] Pēc testa izpildīsanas lietotājam parādās uz cik jautājumiem atbildējis pareizi .
+- [x] Ka arī parādīt uz kādiem jautājumiem atbildējis nepareizi.
