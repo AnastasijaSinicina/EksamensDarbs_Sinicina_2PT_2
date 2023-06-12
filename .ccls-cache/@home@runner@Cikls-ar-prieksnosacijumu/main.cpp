@@ -80,7 +80,11 @@ using namespace std;
     cout<<jautajumi[i]<<"\n";
     cout<<atbilzuVar[i]<<"\n";
     cin>>atb[i];
-
+      
+      if((atb[i].find('A') == string::npos && atb[i].find('B') == string::npos && atb[i].find('C') == string::npos&& atb[i].find('D') == string::npos)){
+      cout<<"Kļūda. Nav atrasts nevien attiecīgais burts\n";
+      } ///Pārbauda, lai lietotāja atbildē būtu vismaz 1 burts (A,B,C vai D). npos (no-position) - nozīmē, ka meklētais elements nav atrasts. Paziņojums ja neviens burts nav atrasts.
+      
     if(atb[i]==pareizAtbildes[i]){
       cout<<"PAREIZI!\n\n";
       punkti++;
