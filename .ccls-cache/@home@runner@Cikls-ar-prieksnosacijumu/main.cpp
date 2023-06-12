@@ -63,9 +63,9 @@ using namespace std;
   atbilzuVar[9] = "\tA.\tint a = 0;\n\t\twhile (a > 10) {\n\t\tcout<<a;}\n\n"
      "\tB.\tint b = 0;\n\t\twhile(b < 5){\n\t\tcout<<b; }\n\n"
     "\tC.\tint c = 4;\n\t\twhile(c<10){\n\t\tcout<<c<<\" \"\n\t\tc+=2;}\n\n"
-    "\tD.\tint d = 4;\n\t\twhile(d<4){\n\t\tcout<<d<<\" \"\n\t\td++;}";
+    "\tD.\tint d = 0;\n\t\twhile(d<4){\n\t\tcout<<d<<\" \"\n\t\td++;}";
 
-  pareizAtbildes[0] = "A,C";
+  pareizAtbildes[0] = "B,C";
   pareizAtbildes[1] = "A,B,D";
   pareizAtbildes[2] = "C,D";
   pareizAtbildes[3] = "A,B";
@@ -74,7 +74,7 @@ using namespace std;
   pareizAtbildes[6] = "A,B";
   pareizAtbildes[7] = "A,B,C";
   pareizAtbildes[8] = "A,B";
-  pareizAtbildes[9] = "B,C";
+  pareizAtbildes[9] = "C,D";
 
   for(int i=0; i<10; i++){
     cout<<jautajumi[i]<<"\n";
@@ -97,7 +97,7 @@ using namespace std;
   }else{
   cout<<"Nepareizo jautājumu sarakts: \n\n";
   for(int i=0; i<10; i++){
-    if (!nepareiziJautajumi[i].empty() && !nepareiziAtbildes[i].empty()) {
+    if (!nepareiziJautajumi[i].empty() && !nepareiziAtbildes[i].empty()) { //Tajā vieta kur atrodas parezi atbildēts jautājums, netiek izvadīts tukšums
     cout<<nepareiziJautajumi[i]<<"\n";
     cout<<"Pareizas atbildes: "<<nepareiziAtbildes[i]<<"\n\n";
      }
