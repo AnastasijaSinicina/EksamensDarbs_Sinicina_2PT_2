@@ -3,7 +3,7 @@ int main() {
 using namespace std;
   
   cout<<"Sveiki! Tev ir iespēja pārbaudīt savas zināšanas par tēmu \"Cikls ar prieksnosacījumu\"\n";
-  cout<<"Uz katru jautājumu ir 2 vai 3 pareizas atbildes. Atbildes raksti ar lielajiem burtiem, alfabetu secībā un ar komatiem(bez atstarpem)\nPiemēram: A,B,D\n\n";
+  cout<<"Uz katru jautājumu ir 2 vai 3 pareizas atbildes. Pie katra jautājuma iekavās pierakstīts pareizo atbilžu skaits. Atbildes raksti ar lielajiem burtiem, alfabetu secībā un ar komatiem(bez atstarpem)\nPiemēram: A,B,D\n\n";
   
   string jautajumi[10]; //masīvs ar jautājumiem
   string atbilzuVar[10]; //masīvs ar atbilžu variantiem
@@ -13,18 +13,18 @@ using namespace std;
   string nepareiziAtbildes[10]; //masīvs, kurā tiek ievietotās pareizas atbildes uz jautājumiem, kur lietotājs pieļaujis kļūdu
   int punkti = 0; //punktu skaits
 
-  jautajumi [0] = "1. Kā saucās cikls kura pieraksts ir šāds?\n"
+  jautajumi [0] = "1. Kā saucās cikls kura pieraksts ir šāds?(2)\n"
     "\twhile(<nosacījums>){\n"
     "\tizpildāmie operatori; }\n";
-  jautajumi[1] = "2. Kuri apgalvojumi apraksta while ciklu?";
-  jautajumi[2] = "3. Kāda ir \"while\" cikla sintakse?";
-  jautajumi[3] = "4. Kuri cikli darbosies bezgalīgi daudz?";
-  jautajumi[4] = "5. Vai \"while\" ciklā var atrasties citi cikli?";
-  jautajumi[5] = "6. Kādas ir \"while\" cikla iespējamās problēmas?";
-  jautajumi[6] = "7. Kā var pārtraukt while cikla izpildi agrāk nekā nosacījums kļūst nepatiess?";
-  jautajumi[7] = "8. Kā palielināt mainīgā vērtību \"while\" ciklā?";
-  jautajumi[8] = "9. Kuri cikli neizpīldīsies?";
-  jautajumi[9] = "10. Kuri cikli darbosies 4 reizes?";
+  jautajumi[1] = "2. Kuri apgalvojumi apraksta while ciklu?(3)";
+  jautajumi[2] = "3. Kāda ir \"while\" cikla sintakse?(2)";
+  jautajumi[3] = "4. Kuri cikli darbosies bezgalīgi daudz?(2)";
+  jautajumi[4] = "5. Vai \"while\" ciklā var atrasties citi cikli?(2)";
+  jautajumi[5] = "6. Kādas ir \"while\" cikla iespējamās problēmas?(2)";
+  jautajumi[6] = "7. Kā var pārtraukt while cikla izpildi agrāk nekā nosacījums kļūst nepatiess?(2)";
+  jautajumi[7] = "8. Kā palielināt mainīgā vērtību \"while\" ciklā?(3)";
+  jautajumi[8] = "9. Kuri cikli neizpīldīsies?(2)";
+  jautajumi[9] = "10. Kuri cikli darbosies 4 reizes?(2)";
     
 
 
@@ -82,10 +82,10 @@ using namespace std;
     cin>>atb[i];
 
     if(atb[i]==pareizAtbildes[i]){
-      cout<<"PAREIZI!\n";
+      cout<<"PAREIZI!\n\n";
       punkti++;
     }else{
-      cout<<"NEPAREIZI!\n";
+      cout<<"NEPAREIZI!\n\n";
     nepareiziJautajumi[i] = jautajumi[i]; //ja atbilde ir nepareiza, tad šīs jautājums tiek ievietots jaunajā masīva
       nepareiziAtbildes[i] = pareizAtbildes[i]; //ja atbilde ir nepareiza, tad pareizās atbildes attiecīgam jautājumam tiek ievietotas jaunajā masīvā      
     }
